@@ -53,11 +53,12 @@ let playRound = function (e) {
   );
   if (computerSelection === playerSelection) {
     results.textContent = "Round draw!";
-  } else if (computerSelection === "rock" && playerSelection === "paper") {
-    results.textContent = "Round won! Paper beats rock";
-    playerScore += 1;
-  } else if (computerSelection === "paper" && playerSelection === "scissors") {
-    results.textContent = "Round won! Scissors beats paper ";
+  } else if (
+    (computerSelection === "scissors" && playerSelection === "rock") ||
+    (computerSelection === "rock" && playerSelection === "paper") ||
+    (computerSelection === "paper" && playerSelection === "scissors")
+  ) {
+    results.textContent = `Round won! ${playerSelection} beats ${computerSelection}`;
     playerScore += 1;
   } else {
     results.textContent = `Round lost! ${computerSelection} beats ${playerSelection} `;
