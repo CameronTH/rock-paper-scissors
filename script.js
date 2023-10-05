@@ -1,19 +1,12 @@
 const buttonsContainer = document.querySelector(".buttons");
-const rockButton = document.querySelector(".rock");
-const paperButton = document.querySelector(".paper");
-const scissorsButton = document.querySelector(".scissors");
+const choices = document.querySelectorAll(".choices");
 const results = document.querySelector(".results");
 
-rockButton.addEventListener("click", (e) => {
-  playRound("rock");
-});
-
-paperButton.addEventListener("click", (e) => {
-  playRound("paper");
-});
-scissorsButton.addEventListener("click", (e) => {
-  playRound("scissors");
-});
+choices.forEach((choice) =>
+  choice.addEventListener("click", (e) => {
+    playRound(e);
+  })
+);
 
 let number = 0;
 let playerScore = 0;
@@ -46,12 +39,12 @@ let calculateResults = function (cscore, pscore) {
   }
 };
 
-let playRound = function (playerChoice) {
+let playRound = function (e) {
   //for (i = 0; i < 5; i++) {
   roundCounter += 1;
   console.log(roundCounter);
 
-  let playerSelection = playerChoice;
+  let playerSelection = e.target.id;
   const computerSelection = getComputerChoice();
   console.log(
     `Computer selected: (${computerSelection}) Player selected: (${playerSelection})`
