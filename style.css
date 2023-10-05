@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: arial;
+}
+button {
+  border-radius: 10px;
+  height: 50px;
+  width: 150px;
+  background-color: #cacaca;
+  border: 5px solid #7f8c8d;
+  transition: opacity 0.15s ease;
+}
+
+button:hover {
+  opacity: 60%;
+}
+
+.button-container {
+  height: 50px;
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+  background-color: #4e4e4e;
+}
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+.results {
+  display: flex;
+  height: 200px;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+}
