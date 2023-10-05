@@ -16,15 +16,27 @@ button:hover {
 }
 
 .button-container {
-  height: 50px;
-  padding: 20px;
-  justify-content: center;
+  height: 120px;
+  padding: 10px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+
   background-color: #4e4e4e;
+}
+.title {
+  margin: 10px;
+  color: white;
 }
 .buttons {
   display: flex;
   gap: 20px;
+}
+.rounds {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  font-size: 30px;
 }
 .results {
   display: flex;

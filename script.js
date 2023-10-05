@@ -1,5 +1,6 @@
 const buttonsContainer = document.querySelector(".buttons");
 const choices = document.querySelectorAll(".choices");
+const rounds = document.querySelector(".rounds");
 const results = document.querySelector(".results");
 
 choices.forEach((choice) =>
@@ -42,6 +43,7 @@ let calculateResults = function (cscore, pscore) {
 let playRound = function (e) {
   //for (i = 0; i < 5; i++) {
   roundCounter += 1;
+  rounds.textContent = `Round: ${roundCounter}`;
   console.log(roundCounter);
 
   let playerSelection = e.target.id;
